@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update RSVP</title>
+</head>
+<body>
+    <h3>Update RSVP</h3>
+    <form action="/rsvp/update" method="post" data-th-object="${rsvp}">
+        <p>
+            <input type="hidden" data-th-field="*{id}">
+        </p>
+        <p>
+            Full Name: <input type="text" data-th-field="*{fullname}">
+        </p>
+        <p>
+            Email: <input type="email" data-th-field="*{email}">
+        </p>
+        <p>
+            Phone: <input type="text" data-th-field="*{phone}">
+        </p>
+        <p>
+            Confirmation Date:<input type="date" data-th-field="*{confirmationDate}">
+        </p>
+        <p>
+            Comments: <input type="text" data-th-field="*{comments}">
+        </p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</body>
+</html>
